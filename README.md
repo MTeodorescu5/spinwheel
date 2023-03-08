@@ -1,3 +1,3 @@
 '''
-This is my attempt at creating an interactive spinwheel.
+Zack and I are attempting to create a random participant and prize picker.
 '''
