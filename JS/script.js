@@ -2,7 +2,7 @@
 const showTimer = true;
 // Add list of names here
 const namesList = [
-	'Ivano',
+	'Ivano Mano',
 	'Lovro',
 	'Dominik', 
 	'Vid',
@@ -21,15 +21,15 @@ const headerOne = document.getElementById('headerNames');
 
 // Optional countdown timer
 // Add zero in front of numbers < 10
-function checkSecond(sec) {
-  if (sec < 10 && sec >= 0) {
-		sec = "0" + sec;
-	} 
-  if (sec < 0) {
-		sec = "59";
-	}
-  return sec;
-}
+// function checkSecond(sec) {
+//   if (sec < 10 && sec >= 0) {
+// 		sec = "0" + sec;
+// 	} 
+//   if (sec < 0) {
+// 		sec = "59";
+// 	}
+//   return sec;
+// }
 // Start or stop the name shuffle on button click
 startButton.addEventListener('click', function() {
 	this.style.display = "none";

@@ -34,7 +34,7 @@ h1#headerNames {
 	display: none;
 }
 
-#timerWrapper {
+/* #timerWrapper {
 	margin: 50px 0;
 	color: #fff;
 	font-family: Arial, sans-serif;
@@ -45,5 +45,5 @@ h1#headerNames {
 }
 #timerWrapper.visible {
 	opacity: 1;
-}
+} */
 
