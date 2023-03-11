@@ -53,7 +53,8 @@ stopButton.addEventListener('click', function() {
 });
 
 // Allow use of spacebar to start/stop name shuffle
-document.body.onkeyup = function(e) {
+
+/* document.body.onkeyup = function(e) {
 	if (e.keyCode == 32) {
 		if (x%2===0) {
 			startButton.style.display = "none";
@@ -77,5 +78,6 @@ document.body.onkeyup = function(e) {
 		x++; 
 	}
 } 
+*/
 
 

@@ -1,5 +1,5 @@
 body {
-	background: #333;
+	background: lightblue;
 }
 
 h1#headerNames {
@@ -33,6 +33,8 @@ h1#headerNames {
 	background: #ff0000;
 	display: none;
 }
+
+
 
 /* #timerWrapper {
 	margin: 50px 0;

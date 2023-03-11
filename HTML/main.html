@@ -9,10 +9,32 @@
     
     <title>Prize Picker</title>
 </head>
+
 <body>
     <h1 id="headerNames">?</h1>
     <div class="button" id="startButton">start</div>
     <div class="button" id="stopButton">stop</div>
 </body>
-<script src="/./JS/script.js"></script>
+<script src="/./js/script.js"></script>
 </html>
+
+<!-- input section for participants and prizes -->
+<form>
+    <div class="formBox">
+        <label for="pname">Participant:</label><br>
+        <input type="text" id="pname" name="pname"><br>
+    </div>
+    <!-- <div class="formBox">
+        <label for="prize">Prize:</label><br>
+        <input type="text" id="prize" name="prize"><br>
+    </div> -->
+    <div class="formBox">
+        <input type="submit" id="btn" value="Submit">
+    </div>
+    <div id="msg">
+        <pre></pre>
+    </div>
+</form>
+<script src="/./js/input.js"></script>
+
+<ul id="myList"></ul>
