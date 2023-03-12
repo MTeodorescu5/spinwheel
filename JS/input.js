@@ -1,31 +1,25 @@
-let participants = [];
+export const participants = [];
+let lastIndexPrinted = -1; // initialize to -1 so we print everything in the first loop
 
-const addPart = (ev)=>{
-    ev.preventDefault(); //to stop the form submitting (don't lose data)
-    let parts = {
-        id: Date.now(),
-        pname: document.getElementById('pname').value
-    }
-    participants.push(parts);
-    document.forms[0].reset(); //clear the form for the next entries
-
-    //for display purposes only
-    console.warn('added', {participants} );
-    //currently printing duplicates - will update to print each name 
-    //once.   
-    const myListElm = document.querySelector("#myList");
-
-    participants.forEach(item => {
-        const itemElem = document.createElement("li");
-        itemElem.textContent = item.pname;
-        myListElm.appendChild(itemElem);
-    });
-
-    //Saving to local storage
-    localStorage.setItem('ParticipantsList', JSON.stringify(participants))
+function addParticipant(event) {
+  event.preventDefault();  
+  const pname = document.querySelector("#pname").value;
+  participants.push({ pname });
+  lastIndexPrinted++;
+  printNewParticipant(lastIndexPrinted);
+  document.forms[0].reset(); //clear the form for the next entries
+  localStorage.setItem('ParticipantsList', JSON.stringify(participants)) // Saving to local storage
 }
-    
 
+function printNewParticipant(index) {
+  const myListElm = document.querySelector("#myList");
+  const itemElem = document.createElement("li");
+  itemElem.textContent = participants[index].pname;
+  myListElm.appendChild(itemElem);
+}
+
+//Waits for content to load and triggers functions based on click event.
 document.addEventListener('DOMContentLoaded', ()=>{
-    document.getElementById('btn').addEventListener('click', addPart);
+    document.getElementById('btn').addEventListener('click', addParticipant);
 });
+

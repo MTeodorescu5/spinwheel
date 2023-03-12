@@ -1,3 +1,5 @@
+import { participants } from './input.js'
+
 "use strict";
 const showTimer = true;
 // Add list of names here
@@ -19,17 +21,6 @@ const startButton = document.getElementById('startButton');
 const stopButton = document.getElementById('stopButton');
 const headerOne = document.getElementById('headerNames');
 
-// Optional countdown timer
-// Add zero in front of numbers < 10
-// function checkSecond(sec) {
-//   if (sec < 10 && sec >= 0) {
-// 		sec = "0" + sec;
-// 	} 
-//   if (sec < 0) {
-// 		sec = "59";
-// 	}
-//   return sec;
-// }
 // Start or stop the name shuffle on button click
 startButton.addEventListener('click', function() {
 	this.style.display = "none";
@@ -51,6 +42,15 @@ stopButton.addEventListener('click', function() {
 	}
 	startTimer();
 });
+
+
+
+
+
+
+
+
+
 
 // Allow use of spacebar to start/stop name shuffle
 
