@@ -1,48 +1,34 @@
-import { participants } from './input.js'
+const participants = [];
 
-"use strict";
-const showTimer = true;
-// Add list of names here
-const namesList = [
-	'Ivano Mano',
-	'Lovro',
-	'Dominik', 
-	'Vid',
-	'Roko',
-	'Luka',
-	'Niko'
-];
+function displayInput() {
+  const userInput = document.getElementById("userInput").value;
+  participants.push(userInput);
+  const outputList = document.getElementById("outputList");
+  const newItem = document.createElement("li");
+  newItem.innerHTML = userInput;
+  outputList.appendChild(newItem);
+  document.forms[0].reset();
+}
 
-// Default variables
 let i = 0;
 let x = 0;
 let intervalHandle = null;
-const startButton = document.getElementById('startButton');
-const stopButton = document.getElementById('stopButton');
-const headerOne = document.getElementById('headerNames');
+const startButton = document.getElementById("startButton");
+const stopButton = document.getElementById("stopButton");
+const headerOne = document.getElementById("headerNames");
 
-// Start or stop the name shuffle on button click
-startButton.addEventListener('click', function() {
-	this.style.display = "none";
-	stopButton.style.display = "block";
-	intervalHandle = setInterval(function () {
-		headerNames.textContent = namesList[i++ % namesList.length];
-	}, 50);
-	if (showTimer===true) {
-		timerWrapper.classList.remove('visible');
-	}
+startButton.addEventListener("click", function () {
+  this.style.display = "none";
+  stopButton.style.display = "block";
+  intervalHandle = setInterval(function () {
+    headerNames.textContent = participants[i++ % participants.length];
+  }, 50);
 });
-stopButton.addEventListener('click', function() {
-	this.style.display = "none";
-	startButton.style.display = "block";
-	clearInterval(intervalHandle);
-	timer.innerHTML = time;
-	if (showTimer===true) {
-		timerWrapper.classList.add('visible');
-	}
-	startTimer();
+stopButton.addEventListener("click", function () {
+  this.style.display = "none";
+  startButton.style.display = "block";
+  clearInterval(intervalHandle);
 });
-
 
 
 
